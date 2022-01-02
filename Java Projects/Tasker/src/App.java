@@ -6,7 +6,7 @@ public class App {
         Scanner keyboard = new Scanner(System.in);
         final int WEEKLY_TASKS = 3;
         final int MONTHLY_TASKS = 1;
-        LinkedList<Task> tasks;
+        LinkedList<Task> dailyTasks;
         Weeklies weeklies = new Weeklies();
         Monthlies monthlies = new Monthlies();
 
@@ -15,15 +15,15 @@ public class App {
             System.out.println("Does Julia need new tasks? Y/N");
             String input = keyboard.nextLine().toUpperCase();
             if(input.equals("Y")) {
-                tasks.clear();
+                dailyTasks.clear();
                 while(weeklies.getTaskNum() < WEEKLY_TASKS) {
-                    tasks.add(weeklies.getTask());
+                    dailyTasks.add(weeklies.getTask());
                 }
                 while(monthlies.getTaskNum() < MONTHLY_TASKS) {
-                    tasks.add(monthlies.getTask());
+                    dailyTasks.add(monthlies.getTask());
                 }
                 
-                System.out.println(tasks); //This is probably going to print a memory address
+                System.out.println(dailyTasks); //This is probably going to print a memory address
             }
             if(input.equals("N")) {
                 System.out.println("See you tomorrow");

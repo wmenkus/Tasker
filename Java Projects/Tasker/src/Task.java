@@ -1,15 +1,18 @@
 public class Task {
     private int taskValue;
     private String task;
+    private boolean done;
 
     public Task() {
         taskValue = 0;
         task = "";
+        boolean done = false;
     }
 
-    public Task(int taskValue, String task) {
-        setTaskValue(taskValue);
+    public Task(String task, int taskValue, boolean done) {
         this.task = task;
+        setTaskValue(taskValue);
+        this.done = done;
     }
 
     public int getTaskValue() {
@@ -28,6 +31,14 @@ public class Task {
 
     public void setTask(String task) {
         this.task = task;
+    }
+
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
     }
 
     public String toString() {
