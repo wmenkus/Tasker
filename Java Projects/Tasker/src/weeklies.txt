@@ -1,0 +1,21 @@
+false
+3
+COLUMN 1
+Sweep/mop main room,2,false
+Clean shower,2,false
+Sweep/mop laundry room and bathroom,1,false
+Sweep/mop room,1,false
+Clean bathroom,1,false
+Clean counter,1,false
+COLUMN 2
+Dishes,1,false
+Dishes,1,false
+Dishes,1,false
+Clean main room,1,false
+Clean stove,1,false
+COLUMN 3
+Towels,1,false
+Laundry,1,false
+Sheets,1,false
+Clean bed,1,false
+Clean fridge,1,false

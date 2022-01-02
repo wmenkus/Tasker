@@ -6,7 +6,7 @@ public class Task {
     public Task() {
         taskValue = 0;
         task = "";
-        boolean done = false;
+        done = false;
     }
 
     public Task(String task, int taskValue, boolean done) {

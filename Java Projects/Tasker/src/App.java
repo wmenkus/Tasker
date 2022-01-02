@@ -4,9 +4,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        final int WEEKLY_TASKS = 3;
-        final int MONTHLY_TASKS = 1;
-        LinkedList<Task> dailyTasks;
+        LinkedList<Task> dailyTasks = new LinkedList<Task>();
         Weeklies weeklies = new Weeklies();
         Monthlies monthlies = new Monthlies();
 
@@ -15,14 +13,8 @@ public class App {
             System.out.println("Does Julia need new tasks? Y/N");
             String input = keyboard.nextLine().toUpperCase();
             if(input.equals("Y")) {
-                dailyTasks.clear();
-                while(weeklies.getTaskNum() < WEEKLY_TASKS) {
-                    dailyTasks.add(weeklies.getTask());
-                }
-                while(monthlies.getTaskNum() < MONTHLY_TASKS) {
-                    dailyTasks.add(monthlies.getTask());
-                }
-                
+                weeklies.getTasks(dailyTasks);
+                monthlies.getTasks(dailyTasks);
                 System.out.println(dailyTasks); //This is probably going to print a memory address
             }
             if(input.equals("N")) {
@@ -33,5 +25,9 @@ public class App {
                 System.out.println("Incorrect input");
             }
         }
+
+        weeklies.save();
+        monthlies.save();
+        keyboard.close();
     }
 }
