@@ -23,12 +23,18 @@ public class Monthlies {
             }
             Task task = pullTask();
             taskNum += task.getTaskValue();
+            dailyTasks.add(task);
+        }
+        else {
+            dailyTasks.add(new Task("No monthly", 1, true));
         }
     }
 
     private void resetTasks() {
         while(doneTasks.size() > 0) {
-            readyTasks.add(doneTasks.removeFirst());
+            Task task= doneTasks.removeFirst();
+            task.setDone(false);
+            readyTasks.add(task);
         }
     }
 
@@ -44,7 +50,7 @@ public class Monthlies {
 	{
 		try
 		{
-			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("monthlies.txt"));
+			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\monthlies.txt"));
             fileWriter.println(taskNum);
 			for(Task t : readyTasks)
             {
@@ -65,7 +71,7 @@ public class Monthlies {
 	{
 		try
 		{
-			Scanner fileScanner = new Scanner(new File("monthlies.txt"));
+			Scanner fileScanner = new Scanner(new File("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\monthlies.txt"));
 			readyTasks = new LinkedList<Task>(); //erases previous tasks or inits
             doneTasks = new LinkedList<Task>();
             taskNum = Integer.parseInt(fileScanner.nextLine());
@@ -75,7 +81,7 @@ public class Monthlies {
 				String fileLine = fileScanner.nextLine();
                 String[] split = fileLine.split(",");
                 Task newTask = new Task(split[0], Integer.parseInt(split[1]), Boolean.parseBoolean(split[2]));
-                if(!newTask.isDone()) {
+                if(newTask.isDone()) {
                     doneTasks.add(newTask);
                 }
                 else {

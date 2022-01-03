@@ -15,10 +15,10 @@ public class App {
             if(input.equals("Y")) {
                 weeklies.getTasks(dailyTasks);
                 monthlies.getTasks(dailyTasks);
-                System.out.println(dailyTasks); //This is probably going to print a memory address
+                System.out.println(dailyTasks);
+                quit = true;
             }
-            if(input.equals("N")) {
-                System.out.println("See you tomorrow");
+            else if(input.equals("N")) {
                 quit = true;
             }
             else {
@@ -26,6 +26,7 @@ public class App {
             }
         }
 
+        System.out.println("See you tomorrow");
         weeklies.save();
         monthlies.save();
         keyboard.close();

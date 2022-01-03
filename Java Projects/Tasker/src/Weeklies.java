@@ -24,6 +24,7 @@ public class Weeklies {
         Task column1Task;
         if(wasLaundry) {
             column1Task = new Task("Put away laundry", 1, true);
+            wasLaundry = false;
         }
         else {
             if(column1Ready.isEmpty()) {
@@ -90,19 +91,25 @@ public class Weeklies {
 
     private void resetColumn1() {
         while(column1Done.size() > 0) {
-            column1Ready.add(column1Done.removeFirst());
+            Task task= column1Done.removeFirst();
+            task.setDone(false);
+            column1Ready.add(task);
         }
     }
 
     private void resetColumn2() {
         while(column2Done.size() > 0) {
-            column2Ready.add(column2Done.removeFirst());
+            Task task= column2Done.removeFirst();
+            task.setDone(false);
+            column2Ready.add(task);
         }
     }
 
     private void resetColumn3() {
         while(column3Done.size() > 0) {
-            column3Ready.add(column3Done.removeFirst());
+            Task task= column3Done.removeFirst();
+            task.setDone(false);
+            column3Ready.add(task);
         }
     }
 
@@ -110,7 +117,7 @@ public class Weeklies {
 	{
 		try
 		{
-			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("weeklies.txt"));
+			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\weeklies.txt"));
             fileWriter.println(wasLaundry);
             fileWriter.println(litterboxCooldown);
             fileWriter.println("COLUMN 1");
@@ -146,7 +153,7 @@ public class Weeklies {
 	{
 		try
 		{
-			Scanner fileScanner = new Scanner(new File("weeklies.txt"));
+			BufferedReader fileScanner = new BufferedReader(new FileReader("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\weeklies.txt"));
 			column1Ready = new LinkedList<Task>(); //erases previous tasks or inits
             column1Done = new LinkedList<Task>();
             column2Ready = new LinkedList<Task>();
@@ -154,44 +161,47 @@ public class Weeklies {
             column3Ready = new LinkedList<Task>();
             column3Done = new LinkedList<Task>();
 
-            wasLaundry = Boolean.parseBoolean(fileScanner.nextLine());
-            litterboxCooldown = Integer.parseInt(fileScanner.nextLine());
-            String fileLine = fileScanner.nextLine();
+            wasLaundry = Boolean.parseBoolean(fileScanner.readLine());
+            litterboxCooldown = Integer.parseInt(fileScanner.readLine());
+            String fileLine = fileScanner.readLine();
+            fileLine = fileScanner.readLine();
 			while (!fileLine.equals("COLUMN 2"))
 			{
-				fileLine = fileScanner.nextLine();
                 String[] split = fileLine.split(",");
                 Task newTask = new Task(split[0], Integer.parseInt(split[1]), Boolean.parseBoolean(split[2]));
-                if(!newTask.isDone()) {
+                if(newTask.isDone()) {
                     column1Done.add(newTask);
                 }
                 else {
                     column1Ready.add(newTask);
                 }
+                fileLine = fileScanner.readLine();
 			}
+            fileLine = fileScanner.readLine();
             while (!fileLine.equals("COLUMN 3"))
 			{
-				fileLine = fileScanner.nextLine();
                 String[] split = fileLine.split(",");
                 Task newTask = new Task(split[0], Integer.parseInt(split[1]), Boolean.parseBoolean(split[2]));
-                if(!newTask.isDone()) {
-                    column1Done.add(newTask);
+                if(newTask.isDone()) {
+                    column2Done.add(newTask);
                 }
                 else {
-                    column1Ready.add(newTask);
+                    column2Ready.add(newTask);
                 }
+                fileLine = fileScanner.readLine();
 			}
-            while (fileScanner.hasNextLine())
+            fileLine = fileScanner.readLine();
+            while (fileLine != null)
 			{
-				fileLine = fileScanner.nextLine();
                 String[] split = fileLine.split(",");
                 Task newTask = new Task(split[0], Integer.parseInt(split[1]), Boolean.parseBoolean(split[2]));
-                if(!newTask.isDone()) {
-                    column1Done.add(newTask);
+                if(newTask.isDone()) {
+                    column3Done.add(newTask);
                 }
                 else {
-                    column1Ready.add(newTask);
+                    column3Ready.add(newTask);
                 }
+                fileLine = fileScanner.readLine();
 			}
 			fileScanner.close();
 		}
