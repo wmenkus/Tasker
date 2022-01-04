@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.LinkedList;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Weeklies {
     private LinkedList<Task> column1Ready;
