@@ -20,10 +20,10 @@ Dust top of cabinets,1,false
 Deep clean fridge,1,false
 Clean out freezer,1,false
 Deep clean kitchen,1,false
-Clean trash cans,1,false
 Wipe down cabinet faces,1,false
 Vacuum couch,1,false
 Clean rug,1,false
 Clean inside of car,1,false
 Wash car,1,false
 No monthly,1,false
+Clean trash cans,1,true

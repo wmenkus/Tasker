@@ -17,5 +17,5 @@ COLUMN 3
 Towels,1,false
 Laundry,1,false
 Sheets,1,false
-Clean bed,1,false
+Clean bedroom,1,false
 Clean fridge,1,false
