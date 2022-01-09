@@ -1,12 +1,12 @@
 false
--3
+3
 COLUMN 1
-Sweep/mop main room,2,false
 Sweep/mop laundry room and bathroom,1,true
 Clean bathroom,1,true
 Clean shower,2,true
 Clean counter,1,true
 Sweep/mop room,1,true
+Sweep/mop main room,2,true
 COLUMN 2
 Clean main room,1,true
 Clean stove,1,true
@@ -14,8 +14,8 @@ Dishes,1,true
 Dishes,1,true
 Dishes,1,true
 COLUMN 3
-Clean bedroom,1,true
-Sheets,1,true
-Towels,1,true
-Laundry,1,true
-Clean fridge,1,true
+Clean bedroom,1,false
+Sheets,1,false
+Towels,1,false
+Laundry,1,false
+Clean fridge,1,false
