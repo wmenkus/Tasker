@@ -1,6 +1,5 @@
-1
-Organize garage,2,false
-Change/clean shower,2,false
+2
+Change/clean shower curtain,2,false
 Clean and organize desk,1,false
 Clean microwave,1,false
 Organize shelves,1,false
@@ -27,3 +26,4 @@ Dust blinds,1,true
 Unclog shower/sink,2,true
 Wash car,1,true
 Wash duvet covers,1,true
+Organize garage,2,true
