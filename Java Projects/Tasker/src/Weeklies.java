@@ -116,7 +116,7 @@ public class Weeklies {
 	{
 		try
 		{
-			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\weeklies.txt"));
+			PrintWriter fileWriter = new PrintWriter(new FileOutputStream(".\\Java Projects\\Tasker\\weeklies.txt"));
             fileWriter.println(wasLaundry);
             fileWriter.println(litterboxCooldown);
             fileWriter.println("COLUMN 1");
@@ -152,7 +152,7 @@ public class Weeklies {
 	{
 		try
 		{
-			BufferedReader fileScanner = new BufferedReader(new FileReader("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\weeklies.txt"));
+			BufferedReader fileScanner = new BufferedReader(new FileReader(".\\Java Projects\\Tasker\\weeklies.txt"));
 			column1Ready = new LinkedList<Task>(); //erases previous tasks or inits
             column1Done = new LinkedList<Task>();
             column2Ready = new LinkedList<Task>();

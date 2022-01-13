@@ -50,7 +50,7 @@ public class Monthlies {
 	{
 		try
 		{
-			PrintWriter fileWriter = new PrintWriter(new FileOutputStream("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\monthlies.txt"));
+			PrintWriter fileWriter = new PrintWriter(new FileOutputStream(".\\Java Projects\\Tasker\\monthlies.txt"));
             fileWriter.println(taskNum);
 			for(Task t : readyTasks)
             {
@@ -71,7 +71,7 @@ public class Monthlies {
 	{
 		try
 		{
-			Scanner fileScanner = new Scanner(new File("C:\\Users\\wmenk\\OneDrive\\Desktop\\java-projects\\Java Projects\\Tasker\\monthlies.txt"));
+			Scanner fileScanner = new Scanner(new File(".\\Java Projects\\Tasker\\monthlies.txt"));
 			readyTasks = new LinkedList<Task>(); //erases previous tasks or inits
             doneTasks = new LinkedList<Task>();
             taskNum = Integer.parseInt(fileScanner.nextLine());

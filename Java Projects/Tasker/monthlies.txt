@@ -1,4 +1,4 @@
-2
+1
 Change/clean shower curtain,2,false
 Clean and organize desk,1,false
 Clean microwave,1,false
