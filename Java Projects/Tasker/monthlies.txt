@@ -1,25 +1,8 @@
 1
-Change/clean shower curtain,2,false
-Clean and organize desk,1,false
-Clean microwave,1,false
-Organize shelves,1,false
 Organize closet,1,false
-Organize cabinets,1,false
-Organize pantry,1,false
 Clean windows,1,false
-Dust fan,1,false
-Clean vents,1,false
 No monthly,1,false
-Clean oven,1,false
 Dust top of cabinets,1,false
-Deep clean fridge,1,false
-Clean out freezer,1,false
-Deep clean kitchen,1,false
-Wipe down cabinet faces,1,false
-Vacuum couch,1,false
-Clean rug,1,false
-Clean inside of car,1,false
-No monthly,1,false
 Clean trash cans,1,true
 High dust,1,true
 Dust blinds,1,true
@@ -27,3 +10,20 @@ Unclog shower/sink,2,true
 Wash car,1,true
 Wash duvet covers,1,true
 Organize garage,2,true
+Deep clean kitchen,1,true
+Dust fan,1,true
+Clean and organize desk,1,true
+Clean vents,1,true
+Clean oven,1,true
+Organize pantry,1,true
+Clean rug,1,true
+Wipe down cabinet faces,1,true
+Organize cabinets,1,true
+Change/clean shower curtain,2,true
+Vacuum couch,1,true
+Deep clean fridge,1,true
+No monthly,1,true
+Clean out freezer,1,true
+Organize shelves,1,true
+Clean inside of car,1,true
+Clean microwave,1,true
