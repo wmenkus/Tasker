@@ -1,6 +1,5 @@
 1
 Organize closet,1,false
-Clean windows,1,false
 No monthly,1,false
 Dust top of cabinets,1,false
 Clean trash cans,1,true
@@ -27,3 +26,4 @@ Clean out freezer,1,true
 Organize shelves,1,true
 Clean inside of car,1,true
 Clean microwave,1,true
+Clean windows,1,true
