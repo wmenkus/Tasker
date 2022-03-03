@@ -1,5 +1,4 @@
 1
-Clean trash cans,1,false
 High dust,1,false
 Dust blinds,1,false
 Unclog shower/sink,2,false
@@ -27,3 +26,4 @@ Organize shelves,1,true
 Organize garage,2,true
 Dust fan,1,true
 Clean rug,1,true
+Clean trash cans,1,true
