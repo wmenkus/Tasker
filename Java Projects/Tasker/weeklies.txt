@@ -1,5 +1,9 @@
 false
+<<<<<<< HEAD
 -1
+=======
+0
+>>>>>>> 1e78228548cfce42ed18430a10766b7b3bc1210f
 COLUMN 1
 Clean counter,1,false
 Clean bathroom,1,false
@@ -10,6 +14,10 @@ Sweep/mop room,1,true
 COLUMN 2
 Clean main room,1,false
 Dishes,1,false
+<<<<<<< HEAD
+=======
+Dishes,1,true
+>>>>>>> 1e78228548cfce42ed18430a10766b7b3bc1210f
 Dishes,1,true
 Dishes,1,true
 Clean stove,1,true

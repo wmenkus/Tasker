@@ -15,7 +15,11 @@ Deep clean fridge,1,false
 No monthly,1,false
 Clean out freezer,1,false
 Clean inside of car,1,false
+<<<<<<< HEAD
 Clean microwave,1,false
+=======
+Clean windows,1,false
+>>>>>>> 1e78228548cfce42ed18430a10766b7b3bc1210f
 No monthly,1,false
 Organize closet,1,false
 Dust top of cabinets,1,false
@@ -25,5 +29,9 @@ Organize garage,2,true
 Dust fan,1,true
 Clean rug,1,true
 Clean trash cans,1,true
+<<<<<<< HEAD
 Clean windows,1,true
 Clean and organize desk,1,true
+=======
+Clean microwave,1,true
+>>>>>>> 1e78228548cfce42ed18430a10766b7b3bc1210f
