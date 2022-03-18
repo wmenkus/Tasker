@@ -4,7 +4,6 @@ Dust blinds,1,false
 Unclog shower/sink,2,false
 Wash car,1,false
 Wash duvet covers,1,false
-Deep clean kitchen,1,false
 Clean oven,1,false
 Organize pantry,1,false
 Wipe down cabinet faces,1,false
@@ -25,3 +24,4 @@ Clean rug,1,true
 Clean trash cans,1,true
 Organize cabinets,1,true
 Organize closet,1,true
+Deep clean kitchen,1,true
