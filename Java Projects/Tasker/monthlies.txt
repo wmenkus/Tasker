@@ -8,7 +8,6 @@ Clean oven,1,false
 Organize pantry,1,false
 Wipe down cabinet faces,1,false
 Change/clean shower curtain,2,false
-Vacuum couch,1,false
 Deep clean fridge,1,false
 No monthly,1,false
 Clean out freezer,1,false
@@ -25,3 +24,4 @@ Clean trash cans,1,true
 Organize cabinets,1,true
 Organize closet,1,true
 Deep clean kitchen,1,true
+Vacuum couch,1,true
