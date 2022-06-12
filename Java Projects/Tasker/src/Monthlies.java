@@ -7,7 +7,7 @@ public class Monthlies {
     private LinkedList<Task> readyTasks;
     private LinkedList<Task> doneTasks;
     private Random rand;
-    public final int MONTHLY_TASKS = 1;
+    public final int MONTHLY_TASKS = 2;
     private int taskNum;
 
     public Monthlies() {
@@ -16,17 +16,19 @@ public class Monthlies {
     }
 
     public void getTasks(LinkedList<Task> dailyTasks) {
-        taskNum--;
-        if(taskNum == 0) {
-            if(readyTasks.isEmpty()) {
-                resetTasks();
+        for(int i = 0; i < MONTHLY_TASKS; i++) {
+            taskNum--;
+            if(taskNum == 0) {
+                if(readyTasks.isEmpty()) {
+                    resetTasks();
+                }
+                Task task = pullTask();
+                taskNum += task.getTaskValue();
+                dailyTasks.add(task);
             }
-            Task task = pullTask();
-            taskNum += task.getTaskValue();
-            dailyTasks.add(task);
-        }
-        else {
-            dailyTasks.add(new Task("No monthly", 1, true));
+            else {
+                dailyTasks.add(new Task("No monthly", 1, true));
+            }
         }
     }
 

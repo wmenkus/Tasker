@@ -5,10 +5,10 @@ import java.util.Random;
 public class Weeklies {
     private LinkedList<Task> column1Ready;
     private LinkedList<Task> column1Done;
-    private LinkedList<Task> column2Ready;
+    /*private LinkedList<Task> column2Ready;
     private LinkedList<Task> column2Done;
     private LinkedList<Task> column3Ready;
-    private LinkedList<Task> column3Done;
+    private LinkedList<Task> column3Done;*/
     private Random rand;
     private boolean wasLaundry;
     private int litterboxCooldown;
@@ -21,18 +21,20 @@ public class Weeklies {
     public void getTasks(LinkedList<Task> dailyTasks) {
         //Adds task from column 1
         Task column1Task;
-        if(wasLaundry) {
+        /*if(wasLaundry) {
             column1Task = new Task("Put away laundry", 1, true);
             wasLaundry = false;
         }
-        else {
+        */
+        //else {
             if(column1Ready.isEmpty()) {
                 resetColumn1();
             }
             column1Task = pullColumn1();
-        }
+        //}
         dailyTasks.add(column1Task);
 
+        /*
         //Adds task from column 2 if there is space
         if(column1Task.getTaskValue() == 1) {
             if(column2Ready.isEmpty()) {
@@ -48,19 +50,22 @@ public class Weeklies {
             resetColumn3();
             column3Task = new Task("Litterboxes", 1, true);
         }
-        else {
+        else {*/
+            Task column3Task; //remove this if we go back to columns
             litterboxCooldown--;
             if(litterboxCooldown == 0) {
                 column3Task = new Task("Litterboxes", 1, true);
+                litterboxCooldown = 3;
+                dailyTasks.add(column3Task); //remove this if we go back to columns
             }
-            else {
+            /*else {
                 column3Task = pullColumn3();
                 if(column3Task.getTask().equals("Laundry")) {
                     wasLaundry = true;
                 }
             }
-        }
-        dailyTasks.add(column3Task);
+        }*/
+        //dailyTasks.add(column3Task);
         return;
     }
 
@@ -72,7 +77,7 @@ public class Weeklies {
         return task;
     }
 
-    private Task pullColumn2() {
+    /*private Task pullColumn2() {
         int num = rand.nextInt(column2Ready.size());
         Task task = column2Ready.remove(num);
         task.setDone(true);
@@ -86,7 +91,7 @@ public class Weeklies {
         task.setDone(true);
         column3Done.add(task);
         return task;
-    }
+    }*/
 
     private void resetColumn1() {
         while(column1Done.size() > 0) {
@@ -95,7 +100,7 @@ public class Weeklies {
             column1Ready.add(task);
         }
     }
-
+    /*
     private void resetColumn2() {
         while(column2Done.size() > 0) {
             Task task= column2Done.removeFirst();
@@ -110,7 +115,7 @@ public class Weeklies {
             task.setDone(false);
             column3Ready.add(task);
         }
-    }
+    }*/
 
     public void save()
 	{
@@ -126,6 +131,7 @@ public class Weeklies {
             for(Task t : column1Done) {
                 fileWriter.println(t.getTask()+","+t.getTaskValue()+","+t.isDone());
             }
+            /*
             fileWriter.println("COLUMN 2");
             for(Task t : column2Ready) {
                 fileWriter.println(t.getTask()+","+t.getTaskValue()+","+t.isDone());
@@ -139,7 +145,7 @@ public class Weeklies {
             }
             for(Task t : column3Done) {
                 fileWriter.println(t.getTask()+","+t.getTaskValue()+","+t.isDone());
-            }
+            }*/
 			fileWriter.close();
 		}
 		catch(Exception e)
@@ -155,16 +161,16 @@ public class Weeklies {
 			BufferedReader fileScanner = new BufferedReader(new FileReader(".\\Java Projects\\Tasker\\weeklies.txt"));
 			column1Ready = new LinkedList<Task>(); //erases previous tasks or inits
             column1Done = new LinkedList<Task>();
-            column2Ready = new LinkedList<Task>();
+            /*column2Ready = new LinkedList<Task>();
             column2Done = new LinkedList<Task>();
             column3Ready = new LinkedList<Task>();
-            column3Done = new LinkedList<Task>();
+            column3Done = new LinkedList<Task>();*/
 
             wasLaundry = Boolean.parseBoolean(fileScanner.readLine());
             litterboxCooldown = Integer.parseInt(fileScanner.readLine());
             String fileLine = fileScanner.readLine();
             fileLine = fileScanner.readLine();
-			while (!fileLine.equals("COLUMN 2"))
+			while (fileLine != null)
 			{
                 String[] split = fileLine.split(",");
                 Task newTask = new Task(split[0], Integer.parseInt(split[1]), Boolean.parseBoolean(split[2]));
@@ -176,6 +182,7 @@ public class Weeklies {
                 }
                 fileLine = fileScanner.readLine();
 			}
+            /*
             fileLine = fileScanner.readLine();
             while (!fileLine.equals("COLUMN 3"))
 			{
@@ -202,6 +209,7 @@ public class Weeklies {
                 }
                 fileLine = fileScanner.readLine();
 			}
+            */
 			fileScanner.close();
 		}
 		catch (Exception e)
