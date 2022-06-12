@@ -6,3 +6,4 @@ Deep clean kitchen,1,true
 Clean inside of car,1,true
 Organize pantry,1,true
 Wash car,1,true
+No monthly,1,true
