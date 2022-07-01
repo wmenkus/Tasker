@@ -5,5 +5,5 @@ Clean bathroom,1,false
 Clean stove,1,false
 Clean counter,1,false
 Clean shower,1,false
-Clean bathroom,1,false
 Clean main room,1,false
+Clean bedroom,1,false
