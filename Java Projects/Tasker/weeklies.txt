@@ -1,9 +1,9 @@
 false
-2
+1
 COLUMN 1
-Clean main room,1,true
-Clean stove,1,true
-Clean bathroom,1,true
+Clean main room,1,false
+Clean stove,1,false
+Clean bathroom,1,false
+Clean shower,1,false
+Clean counter,1,false
 Clean bedroom,1,true
-Clean shower,1,true
-Clean counter,1,true

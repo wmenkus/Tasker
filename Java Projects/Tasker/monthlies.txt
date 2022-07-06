@@ -1,9 +1,9 @@
 1
 Deep clean fridge,1,false
 Organize shelves,1,false
-Organize closet,1,false
 Deep clean kitchen,1,false
 Clean inside of car,1,false
 Organize pantry,1,false
-Wash car,1,false
 No monthly,1,false
+Organize closet,1,true
+Wash car,1,true
