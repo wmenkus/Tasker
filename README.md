@@ -1,18 +1,3 @@
-## Getting Started
+# Tasker
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Tasker is an app I created to randomize a set of daily chores from three buckets. Tasks being selected randomly helps combat ADHD, ensuring that while the chores are not on a set schedule, they also are done frequently enough. Certain considerations were also taken with tasks such as laundry, ensuring that washing would always be followed by folding, and that litterbox cleaning was done once every 3-4 days. The app is fairly flexible in that the task lists (monthlies.txt, weeklies.txt) can be added to or removed from as situations change. Compile with javac *.java
